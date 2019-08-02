@@ -62,15 +62,45 @@ class Tickets extends React.Component {
     }
 
     render(){
+        const top = {
+            paddingTop: "-20px"
+        }
+
+        const top1 = {
+            paddingTop: "10px",
+            marginTop: "10px"
+        }
        return(
-           <div>
-               <Search handleSearchByCode={this.handleSearchByCode} />
-               <Filter handleFilter= {this.handleFilter} />
-               <TicketTable ticket_details = {this.state.filteredTickets} handleCheckStatus={this.handleCheckStatus} />
-               <ProgressBar bar_data={this.state.filteredTickets} /><br />
-               <Charts pie_data={this.state.filteredTickets} />
-               <BarCharts bar_data={this.state.filteredTickets} />
-               <Forms handleNewTicket= {this.handleNewTicket} />
+           <div className = "container-fluid">
+           <div style = {top1}><h1>Ticket Master</h1></div>
+                  <div className = "row">
+                  <div className="col-6">
+
+                  </div>
+                    <div style={top} className = "col-3">
+                        <Search handleSearchByCode={this.handleSearchByCode} />
+                        <Filter handleFilter= {this.handleFilter} /><br />
+                    </div>
+               </div>
+
+               <div className = "row">
+                    <div className = "col">
+                        <TicketTable ticket_details = {this.state.filteredTickets} handleCheckStatus={this.handleCheckStatus} />
+                        <ProgressBar bar_data={this.state.filteredTickets} /><br />
+                    </div>
+                    <div className = "col-4 align-self-center">
+                        <Forms handleNewTicket= {this.handleNewTicket} />
+                    </div>
+               </div>
+    
+                <div className = "row">
+                        <div className = "col-4">
+                            <Charts pie_data={this.state.filteredTickets} />
+                        </div>
+                        <div className = "col-6">
+                            <BarCharts bar_data={this.state.filteredTickets} />
+                        </div>
+                </div>    
            </div>
        ) 
     }

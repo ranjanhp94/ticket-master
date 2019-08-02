@@ -5,8 +5,8 @@ import { Table } from 'reactstrap';
 class TicketTable extends React.Component{
     render(){
         return(
-        <div className="col-7">
-            <h2>Listing Tickets - {this.props.ticket_details.length}</h2>
+        <div>
+            <h3>Listing Tickets - {this.props.ticket_details.length}</h3>
             <Table striped size = "sm">
             <thead>
                 <tr>

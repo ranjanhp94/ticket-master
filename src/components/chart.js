@@ -29,10 +29,10 @@ render(){
                 ['Low', Low]
               ]}
               options={{
-                title: 'Some Status',
+                title: 'Ticket Priority %'
               }}
               rootProps={{ 'data-testid': '2' }}
-            />
+            />  
         </div>
     )
 }

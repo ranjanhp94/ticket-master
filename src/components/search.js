@@ -12,10 +12,15 @@ class Search extends React.Component{
     }
 
     render(){
+        const round = {
+            // border: "solid black",
+            padding: "15px",
+            borderRadius: "20px"
+        }
         return(
             <div>                        
                 <label>
-                    <input type="text" name="search" placeholder="search by code" onChange={this.handleSearch}/>
+                    <input type="text" className = "form-control search-form" style={round} name = "search" placeholder = "search by code" onChange={this.handleSearch}/>
                 </label>
             </div>
         )

@@ -36,7 +36,7 @@ render(){
                 ]}
                 options={{
                     chart: {
-                    title: 'Department Status'
+                    title: 'Tickets By Department'
                     },
                 }}
                 rootProps={{ 'data-testid': '2' }}

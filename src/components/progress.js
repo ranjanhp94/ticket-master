@@ -6,7 +6,7 @@ class ProgressBar extends React.Component{
         let ticket = this.props.bar_data.filter((ticket => ticket.status === "completed"))
         let progree = (ticket.length/this.props.bar_data.length) * 100;
         return(
-            <div className="col-7">
+            <div>
             <Progress value={progree}/>
             </div>
         )

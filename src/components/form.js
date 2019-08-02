@@ -62,14 +62,21 @@ class Forms extends React.Component {
 }
 
 render(){
+    const line = {
+        border : "1px solid black",
+        padding: "20px"
+    }
 return(
     <div>
-    <Form onSubmit={this.handleSubmit}>
+    <h3>Add Ticket</h3>
+    <Form style = {line} onSubmit={this.handleSubmit}>
                 <FormGroup>
                 <Label> Name {' '}
                    <input type = 'text' onChange={this.handleName} />
                 </Label><br />
+                </FormGroup>
 
+                <FormGroup>
                 <Label> Department {' '}
                     <select onChange={this.handleDepartment}>
                         <option value="select">Select</option>
@@ -78,24 +85,28 @@ return(
                         <option value="Hr">Hr</option>
                     </select>
                 </Label> <br />
-
+                </FormGroup>
+                
+                <FormGroup>
                 <Label> Priority {' '}
                    <input type = 'radio' name="priority" onChange={this.handlePriority} value="High"/> High
                    <input type = 'radio' name="priority" onChange={this.handlePriority} value="Medium" /> Medium
                    <input type = 'radio' name="priority" onChange={this.handlePriority} value="Low" /> Low
                 </Label> <br />
-                   
+                </FormGroup>
+
+                <FormGroup>
                 <Label> Message {' '}
                    <textarea onChange={this.handleMessage} ></textarea>
                 </Label> <br />
+                </FormGroup>
 
                 <Button color = "primary" size="sm" type='submit' value="submit">Submit</Button>{' '}
                 <Button color = "primary" size="sm" type='reset' value="reset">Reset</Button>
 
-                </FormGroup>
                </Form>
-               </div>
-               )
+        </div>
+               );
     }    
 }   
 
